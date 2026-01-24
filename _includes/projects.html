@@ -2,8 +2,12 @@
   <div class="project-container">
     {% for project in site.data.settings.projects %}
       <a href="{{ site.github.url }}/projects/{{ project.url }}">
-        <div class="project-unit" data-folder="{{ site.github.url }}/projects/{{ project.url }}" style="background-image: url({{ site.github.url }}/assets/img/projects/{{ project.url }}/thumbnail.jpg)">
+    <div class="project-unit" 
+        data-folder="{{ site.github.url }}/projects/{{ project.url }}" 
+        style="background-image: url({{ site.github.url }}/assets/img/projects/{{ project.url }}/{{ project.thumb }}), 
+               linear-gradient(13deg, #d7d7d7 0%, #fefefe 100% 100%);">
           <div class="project-overlay">
+            <strong>{{ project.company }}</strong>
             <strong>{{ project.name }} <i class="fa fa-arrow-right" aria-hidden="true"></i></strong>
           </div>
         </div>

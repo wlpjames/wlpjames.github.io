@@ -12,10 +12,17 @@
     margin: 0px auto 30px
     position: relative
     overflow: hidden
-    background:
-      position: center center
-      repeat: no-repeat
-      size: cover
+    
+    // 1. Set the background-size for multiple layers
+    // 'contain' applies to your image, 'cover' applies to the gradient
+    background-size: contain, cover
+    background-position: center center
+    background-repeat: no-repeat
+
+    // 2. Add the gradient as the base layer
+    // This serves as the fallback/bottom layer under your inline image
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)
+
     .project-overlay
       +position(absolute, 100% 0px null 0px)
       height: 100%
